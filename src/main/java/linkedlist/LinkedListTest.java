@@ -1,5 +1,7 @@
 package linkedlist;
 
+import java.util.Hashtable;
+
 /**
  * Created by pshrestha on 12/5/2016.
  */
@@ -192,6 +194,30 @@ public class LinkedListTest {
             data = dataValue;
         }
 
+        void appendToTail(int d){
+            Node end = new Node(d);
+            Node n = this;
+            while(n.next != null) {
+                n = n.next;
+            }
+            n.next = end;
+        }
+
+        Node deleteNode(Node head, int d){
+            Node node = head;
+            if(node.data.equals(d)){
+                return head.next;
+            }
+            while(node.next != null){
+                if(node.next.data.equals(d)){
+                    node.next = node.next.next;
+                    return head; // head didn't change
+                }
+                node = node.next;
+            }
+            return head;
+        }
+
         public Object getData(){
             return data;
         }
@@ -209,4 +235,6 @@ public class LinkedListTest {
             next = nextValue;
         }
     }
+
+
 }

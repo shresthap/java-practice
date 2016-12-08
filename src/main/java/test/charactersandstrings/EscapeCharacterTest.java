@@ -49,15 +49,15 @@ public class EscapeCharacterTest {
                 case '®':
                     result.append("&reg;");
                     break;
-                case '™':
-                    result.append("&trade;");
-                    break;
-                case '©':
-                    result.append("&copy;");
-                    break;
-                default:
-                    result.append(character);
-                    break;
+//                case '™':
+//                    result.append("&trade;");
+//                    break;
+//                case '©':
+//                    result.append("&copy;");
+//                    break;
+//                default:
+//                    result.append(character);
+//                    break;
             }
             character = iterator.next();
         }
